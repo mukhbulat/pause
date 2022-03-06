@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Pause
 {
-    [RequireComponent(typeof(InputController))]
     [RequireComponent(typeof(HasPause))]
     public class ControllableUnit : MonoBehaviour
     {
