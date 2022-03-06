@@ -1,9 +1,11 @@
+using Pause.Components;
 using Pause.Controllers;
 using UnityEngine;
 
 namespace Pause
 {
     [RequireComponent(typeof(InputController))]
+    [RequireComponent(typeof(HasPause))]
     public class ControllableUnit : MonoBehaviour
     {
         [SerializeField] private InputController inputController;

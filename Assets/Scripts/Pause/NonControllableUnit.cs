@@ -1,7 +1,9 @@
+using Pause.Components;
 using UnityEngine;
 
 namespace Pause
 {
+    [RequireComponent(typeof(HasPause))]
     public class NonControllableUnit : MonoBehaviour
     {
         [SerializeField] private float angularSpeed = 120;

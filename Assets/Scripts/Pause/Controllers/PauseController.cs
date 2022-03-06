@@ -15,8 +15,9 @@ namespace Pause.Controllers
             _pausableComponents = FindObjectsOfType<HasPause>();
         }
 
-        public void Pause(bool isPaused)
+        public void Pause()
         {
+            _isPaused = !_isPaused;
             foreach (var pausable in _pausableComponents)
             {
                 pausable.Pause(_isPaused);
