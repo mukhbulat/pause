@@ -1,4 +1,4 @@
-using System;
+using Pause.Controllers;
 using UnityEngine;
 
 namespace Pause
@@ -8,7 +8,6 @@ namespace Pause
     {
         [SerializeField] private InputController inputController;
         [SerializeField] private float angularSpeed = 120;
-        [SerializeField] private bool rotationDirection;
         private bool _onUpperFloor = false;
         
         
@@ -36,8 +35,7 @@ namespace Pause
 
         private void OnFire1Pressed()
         {
-            int direction = rotationDirection ? 1 : -1;
-            transform.Rotate(Vector3.up, Time.deltaTime * angularSpeed * direction);
+            transform.Rotate(Vector3.up, Time.deltaTime * angularSpeed);
         }
     }
 }

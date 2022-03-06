@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Pause
+namespace Pause.Controllers
 {
     public class InputController : MonoBehaviour
     {
@@ -19,6 +19,11 @@ namespace Pause
             {
                 JumpPressed?.Invoke();
             }
+        }
+
+        public void Pause(bool isPaused)
+        {
+            enabled = !isPaused;
         }
     }
 }
