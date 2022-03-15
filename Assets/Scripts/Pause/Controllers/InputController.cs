@@ -13,12 +13,14 @@ namespace Pause.Controllers
 
         public bool IsInputAvailable { get; private set; } = true;
 
+        private EventSystem _currentEventSystem = EventSystem.current;
+        
         void Update()
         {
             if (!IsInputAvailable) return;
             if (Input.GetButton("Fire1"))
             {
-                if (EventSystem.current.IsPointerOverGameObject()) return;
+                if (_currentEventSystem.IsPointerOverGameObject()) return;
                 Fire1Pressed?.Invoke();
             }
 
