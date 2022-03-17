@@ -13,9 +13,14 @@ namespace Pause.Controllers
 
         public bool IsInputAvailable { get; private set; } = true;
 
-        private EventSystem _currentEventSystem = EventSystem.current;
+        private EventSystem _currentEventSystem;
+
+        private void Awake()
+        {
+            _currentEventSystem = EventSystem.current;
+        }
         
-        void Update()
+        private void Update()
         {
             if (!IsInputAvailable) return;
             if (Input.GetButton("Fire1"))
